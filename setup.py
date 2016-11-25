@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='messenger_platform',
+    name='messenger-platform',
     packages=['messenger_platform'],
     license='The MIT License (MIT)',
     version='0.0.1',
