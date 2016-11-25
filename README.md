@@ -1,6 +1,6 @@
-# MessengerBot
+# Messenger Platform
 
-This is a library for communicating with the Facebook Messenger Platform API. This is a reflection of https://github.com/geeknam/messengerbot, with some exceptions.
+This is a wrapper library for communicating with the Facebook Messenger Platform API. This is a reflection of https://github.com/geeknam/messengerbot, with some exceptions.
 
 ## Includes
  - Sending messages to a user from a bot
