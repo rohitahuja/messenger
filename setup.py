@@ -4,7 +4,7 @@ setup(
     name='messenger-api',
     packages=['messenger_api'],
     license='The MIT License (MIT)',
-    version='0.1.4',
+    version='0.0.1',
     description='Python client for FB Messenger Platform Bot',
     long_description=open('README.md').read(),
     author='Rohit Ahuja',
