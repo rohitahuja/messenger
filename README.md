@@ -11,5 +11,5 @@ pip install -e git+git://github.com/rohitahuja/messenger-platform.git#egg=messen
 
 If updating within a project:
 ```
-pip install update -e git+git://github.com/rohitahuja/messenger-platform.git#egg=messenger_platform 
+pip install --upgrade -e git+git://github.com/rohitahuja/messenger-platform.git#egg=messenger_platform 
 ```
