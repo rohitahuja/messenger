@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='messenger-api',
-    packages=['messenger-api'],
+    packages=['messenger_api'],
     license='The MIT License (MIT)',
     version='0.1.4',
     description='Python client for FB Messenger Platform Bot',
