@@ -1,11 +1,11 @@
 import os
 from django.test import TestCase
-from messenger import MessengerClient
-from messenger.send_api import MessagesRequest
-from messenger.send_api.messages import Message, Sender
-from messenger.send_api.quick_replies import QuickReply, QuickReplies
-from messenger.thread_settings import ThreadSettingsRequest
-from messenger.thread_settings.thread_objects import CallToActions, MenuItem, Greeting, Payload
+from messenger_platform import MessengerClient
+from messenger_platform.send_api import MessagesRequest
+from messenger_platform.send_api.messages import Message, Sender
+from messenger_platform.send_api.quick_replies import QuickReply, QuickReplies
+from messenger_platform.thread_settings import ThreadSettingsRequest
+from messenger_platform.thread_settings.thread_objects import CallToActions, MenuItem, Greeting, Payload
 
 token = os.environ.get('PAGE_ACCESS_TOKEN')
 

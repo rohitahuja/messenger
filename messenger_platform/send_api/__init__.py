@@ -1,5 +1,5 @@
 import requests
-from messenger import BaseMessengerRequest
+from messenger_platform import BaseMessengerRequest
 
 
 class MessagesRequest(BaseMessengerRequest):

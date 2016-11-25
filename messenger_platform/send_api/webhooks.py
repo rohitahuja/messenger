@@ -1,4 +1,4 @@
-from messenger.send_api.messages import Sender, Recipient
+from messenger_platform.send_api.messages import Sender, Recipient
 from datetime import datetime
 
 
