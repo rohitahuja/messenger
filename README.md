@@ -13,17 +13,3 @@ If updating within a project:
 ```
 pip install update -e git+git://github.com/rohitahuja/messenger-platform.git#egg=messenger_platform 
 ```
-
-## Includes
- - Sending messages to a user from a bot
- - Raising messenger related exceptions
- - Getting user profile information
- - Webhook response wrapping
-
-## Does not include
- - Subscribing an app to get updates for a page (what does it do?)
- - Global access client initialized in __init__.py
- - Attachments object
- - Elements (button) object
- - Templates objects
- - Other messenger enhancements
