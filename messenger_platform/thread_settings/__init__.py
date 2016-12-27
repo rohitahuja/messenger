@@ -1,8 +1,8 @@
 import requests
-from messenger_platform import BaseMessengerObject, BaseMessengerRequest, GRAPH_API_URL
+from messenger_platform import MessengerObject, MessengerRequest, GRAPH_API_URL
 
 
-class ThreadSettingsRequest(BaseMessengerRequest):
+class ThreadSettingsRequest(MessengerRequest):
 
     request_type = 'thread_settings'
 

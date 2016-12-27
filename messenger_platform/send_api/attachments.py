@@ -1,7 +1,7 @@
-from messenger_platform import BaseMessengerObject
+from messenger_platform import MessengerObject
 
 
-class Attachment(BaseMessengerObject):
+class Attachment(MessengerObject):
 
     def to_dict(self):
         return {

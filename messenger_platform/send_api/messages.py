@@ -1,7 +1,7 @@
 import json
-from messenger_platform import BaseMessengerObject, BaseMessengerRequest
+from messenger_platform import MessengerObject, MessengerRequest
 
-class Message(BaseMessengerObject):
+class Message(MessengerObject):
     def __init__(self, text=None, attachment=None, quick_replies=None):
         if bool(text) == bool(attachment):
             raise ValueError('<Message> text or attachment must be set, but not both')
@@ -21,7 +21,7 @@ class Message(BaseMessengerObject):
         return data
 
 
-class Participant(BaseMessengerObject):
+class Participant(MessengerObject):
     def __init__(self, id=None, phone_number=None):
         if not id and not phone_number:
             raise ValueError('<%s> id or phone_number must be set' % self.__class__.__name__)

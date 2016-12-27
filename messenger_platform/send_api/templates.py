@@ -1,7 +1,7 @@
-from messenger_platform import BaseMessengerObject
+from messenger_platform import MessengerObject
 
 
-class BaseTemplateObject(BaseMessengerObject):
+class TemplateObject(MessengerObject):
     # put function like this in base class
     def add_element(self, elements, element):
         if len(elements) == self.ELEMENTS_LIMIT:
@@ -9,7 +9,7 @@ class BaseTemplateObject(BaseMessengerObject):
         elements.append(element)
 
 
-class ButtonTemplate(BaseTemplateObject):
+class ButtonTemplate(TemplateObject):
 
     ELEMENTS_LIMIT = 3
     template_type = "button"  # validate existence of template_type

@@ -40,14 +40,13 @@ class MessengerClient(object):
         return response.json()
 
 
-# TODO change the name to this to just messenger object
 # TODO add more error checking based on api
-class BaseMessengerObject(object):
+class MessengerObject(object):
     def to_dict(self):
         raise NotImplementedError
 
 
-class BaseMessengerRequest(BaseMessengerObject):
+class MessengerRequest(MessengerObject):
     """
     Base class for request objects in messenger.
     Must have request_type attribute set.
@@ -61,13 +60,13 @@ class BaseMessengerRequest(BaseMessengerObject):
 
     def __init__(self, method):
         if method not in self.REQUEST_METHODS:
-            raise ValueError('<BaseMessengerRequest> method attr should be one of %s' % str(self.REQUEST_METHODS))
+            raise ValueError('<MessengerRequest> method attr should be one of %s' % str(self.REQUEST_METHODS))
         self.method = method
 
     @property
     def graph_api_endpoint(self):
         if not self.request_type:
-            raise ValueError('<BaseMessengerRequest> must have request_type constant set')
+            raise ValueError('<MessengerRequest> must have request_type constant set')
 
         return '{}/me/{}'.format(GRAPH_API_URL, self.request_type)
 

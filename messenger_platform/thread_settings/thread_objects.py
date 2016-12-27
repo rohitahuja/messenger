@@ -1,7 +1,7 @@
-from messenger_platform import BaseMessengerObject
+from messenger_platform import MessengerObject
 
 
-class Greeting(BaseMessengerObject):
+class Greeting(MessengerObject):
     def __init__(self, text):
         self.text = text
 
@@ -9,7 +9,7 @@ class Greeting(BaseMessengerObject):
         return {'text': self.text}
 
 
-class Payload(BaseMessengerObject):
+class Payload(MessengerObject):
     def __init__(self, payload):
         self.payload = payload
 
@@ -17,7 +17,7 @@ class Payload(BaseMessengerObject):
         return {'payload': self.payload}
 
 
-class MenuItem(BaseMessengerObject):
+class MenuItem(MessengerObject):
 
     MENU_ITEM_TYPES = (
         'web_url', 'postback'
@@ -55,7 +55,7 @@ class MenuItem(BaseMessengerObject):
         return data
 
 
-class CallToActions(BaseMessengerObject):
+class CallToActions(MessengerObject):
 
     PAYLOAD_LIMIT = 1
     MENU_ITEMS_LIMIT = 5

@@ -1,7 +1,7 @@
-from messenger_platform import BaseMessengerObject
+from messenger_platform import MessengerObject
 
 
-class Button(BaseMessengerObject):
+class Button(MessengerObject):
     def __init__(self, title):
         if len(title) > 20:
             raise ValueError('Button title limit is 20 characters')

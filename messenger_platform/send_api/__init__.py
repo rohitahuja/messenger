@@ -1,8 +1,8 @@
 import requests
-from messenger_platform import BaseMessengerRequest
+from messenger_platform import MessengerRequest
 
 
-class MessagesRequest(BaseMessengerRequest):
+class MessagesRequest(MessengerRequest):
 
     NOTIFICATION_TYPE_OPTIONS = (
         'REGULAR', 'SILENT_PUSH', 'NO_PUSH'

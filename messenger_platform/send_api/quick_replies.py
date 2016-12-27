@@ -1,6 +1,6 @@
-from messenger_platform import BaseMessengerObject, MessengerException
+from messenger_platform import MessengerObject, MessengerException
 
-class QuickReply(BaseMessengerObject):
+class QuickReply(MessengerObject):
 
     CONTENT_TYPE_OPTIONS = (
         'text', 'location'
@@ -30,7 +30,7 @@ class QuickReply(BaseMessengerObject):
         return data
 
 
-class QuickReplies(BaseMessengerObject):
+class QuickReplies(MessengerObject):
 
     QUICK_REPLIES_LIMIT = 10
 
