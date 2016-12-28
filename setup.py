@@ -11,5 +11,5 @@ setup(
     author_email='rahuja95@gmail.com',
     url='https://github.com/rohitahuja/messenger',
     keywords='facebook messenger platform wrapper',
-    install_requires=['requests', 'pkgutil']
+    install_requires=['requests']
 )
