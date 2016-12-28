@@ -1,19 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='messenger',
-    package_dir={
-        'messenger': 'messenger',
-        'messenger.send_api': 'messenger/send_api',
-        'messenger.thread_settings': 'messenger/thread_settings',
-        'messenger.user_profile': 'messenger/user_profile'
-    },
-    packages=[
-        'messenger',
-        'messenger.send_api',
-        'messenger.thread_settings',
-        'messenger.user_profile',
-    ],
+    packages=find_packages(),
     license='The MIT License (MIT)',
     version='0.0.1',
     description='Python client for FB Messenger Platform',
