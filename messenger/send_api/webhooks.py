@@ -1,5 +1,9 @@
-from messenger_platform.send_api.messages import Sender, Recipient
 from datetime import datetime
+
+from .messages import (
+    Sender,
+    Recipient,
+)
 
 
 class WebhookMessaging(object):

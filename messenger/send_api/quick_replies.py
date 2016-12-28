@@ -1,4 +1,5 @@
-from messenger_platform import MessengerObject, MessengerException
+from .. import MessengerObject
+
 
 class QuickReply(MessengerObject):
 

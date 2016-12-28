@@ -1,5 +1,4 @@
-import requests
-from messenger_platform import MessengerRequest
+from .. import MessengerRequest
 
 
 class MessagesRequest(MessengerRequest):

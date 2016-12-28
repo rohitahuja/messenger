@@ -2,6 +2,7 @@ import requests
 
 GRAPH_API_URL = 'https://graph.facebook.com/v2.8'
 
+
 class MessengerException(Exception):
     pass
 
@@ -46,7 +47,7 @@ class MessengerObject(object):
         raise NotImplementedError
 
 
-class MessengerRequest(MessengerObject):
+class MessengerRequest(object):
     """
     Base class for request objects in messenger.
     Must have request_type attribute set.

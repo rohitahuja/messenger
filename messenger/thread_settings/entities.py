@@ -1,4 +1,4 @@
-from messenger_platform import MessengerObject
+from .. import MessengerObject
 
 
 class Greeting(MessengerObject):

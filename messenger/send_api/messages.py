@@ -1,5 +1,5 @@
-import json
-from messenger_platform import MessengerObject, MessengerRequest
+from .. import MessengerObject
+
 
 class Message(MessengerObject):
     def __init__(self, text=None, attachment=None, quick_replies=None):

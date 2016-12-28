@@ -1,5 +1,9 @@
 import requests
-from messenger_platform import MessengerError, GRAPH_API_URL
+
+from .. import (
+    MessengerError,
+    GRAPH_API_URL,
+)
 
 
 class UserProfile(object):

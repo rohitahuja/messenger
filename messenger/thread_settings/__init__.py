@@ -1,5 +1,4 @@
-import requests
-from messenger_platform import MessengerObject, MessengerRequest, GRAPH_API_URL
+from .. import MessengerRequest
 
 
 class ThreadSettingsRequest(MessengerRequest):
