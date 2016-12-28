@@ -29,3 +29,10 @@ class MessageRequest(MessengerRequest):
         if self.notification_type:
             data['notification_type'] = self.notification_type
         return data
+
+from attachments import *
+from buttons import *
+from messages import *
+from quick_replies import *
+from templates import *
+from webhooks import *

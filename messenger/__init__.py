@@ -1,7 +1,5 @@
 import requests
 
-from . import *
-
 GRAPH_API_URL = 'https://graph.facebook.com/v2.8'
 
 
@@ -75,3 +73,7 @@ class MessengerRequest(object):
 
     def serialize(self):
         return json.dumps(self.to_dict())
+
+from send_api import *
+from thread_settings import *
+from user_profile import *

@@ -52,3 +52,5 @@ class ThreadSettingsRequest(MessengerRequest):
         if self.greeting:
             data['greeting'] = self.greeting.to_dict()
         return data
+
+from entities import *

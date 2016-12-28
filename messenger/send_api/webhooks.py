@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from .messages import (
+from messages import (
     Sender,
     Recipient,
 )
