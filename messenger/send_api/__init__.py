@@ -1,7 +1,7 @@
 from .. import MessengerRequest
 
 
-class MessagesRequest(MessengerRequest):
+class MessageRequest(MessengerRequest):
 
     NOTIFICATION_TYPE_OPTIONS = (
         'REGULAR', 'SILENT_PUSH', 'NO_PUSH'
