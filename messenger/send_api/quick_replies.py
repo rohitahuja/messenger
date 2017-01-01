@@ -9,7 +9,7 @@ class QuickReply(MessengerObject):
 
     def __init__(self, content_type, title=None, payload=None, image_url=None):
         if content_type not in self.CONTENT_TYPE_OPTIONS:
-            raise ValueError('<QuickReply> content_type must be in %s', str(CONTENT_TYPE_OPTIONS))
+            raise ValueError('<QuickReply> content_type must be in %s', str(self.CONTENT_TYPE_OPTIONS))
 
         self.content_type = content_type
         if content_type == 'text':
@@ -39,9 +39,7 @@ class QuickReplies(MessengerObject):
         self.quick_replies = []
 
     def add_quick_reply(self, quick_reply):
-        if len(self.quick_replies) == self.QUICK_REPLIES_LIMIT:
-            raise ValueError('<QuickReplies> number of quick replies cannot exceed %s' % self.QUICK_REPLIES_LIMIT)
-        self.quick_replies.append(quick_reply)
+        self.append(self.quick_replies, quick_reply, self.QUICK_REPLIES_LIMIT)
 
     def to_dict(self):
         return [

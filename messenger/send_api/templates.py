@@ -2,16 +2,12 @@ from .. import MessengerObject
 
 
 class TemplateObject(MessengerObject):
-    # put function like this in base class
-    def add_element(self, elements, element):
-        if len(elements) == self.ELEMENTS_LIMIT:
-            raise ValueError('cannot have more than %s elements' % self.ELEMENTS_LIMIT)
-        elements.append(element)
+    pass
 
 
 class ButtonTemplate(TemplateObject):
 
-    ELEMENTS_LIMIT = 3
+    button_limit = 3
     template_type = "button"  # validate existence of template_type
 
     def __init__(self, text):
@@ -19,7 +15,7 @@ class ButtonTemplate(TemplateObject):
         self.buttons = []
 
     def add_button(self, button):
-        self.add_element(self.buttons, button)
+        self.append(self.buttons, button, self.button_limit)
 
     def to_dict(self):
         return {

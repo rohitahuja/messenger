@@ -46,9 +46,15 @@ class MessengerObject(object):
     def to_dict(self):
         raise NotImplementedError
 
+    def append(self, lst, elem, limit):
+        if len(lst) == limit:
+            raise ValueError('cannot have more than %s %ss' % (limit, elem.__class__.__name__))
+        lst.append(elem)
+
 
 class MessengerRequest(object):
-    """
+    """MessengerRequest
+
     Base class for request objects in messenger.
     Must have request_type attribute set.
     """
