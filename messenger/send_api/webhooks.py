@@ -114,7 +114,7 @@ class WebhookMessaging(object):
 
         Received messaging objects are those that our bot receives.
         """
-        return self.is_message and 'is_echo' not in self.message
+        return self.is_message and not self.message.get('is_echo', False)
 
     @property
     def is_echo(self):
@@ -122,7 +122,7 @@ class WebhookMessaging(object):
 
         Echo messaging objects are echoes of the messages that we send.
         """
-        return self.is_message and 'is_echo' in self.message
+        return self.is_message and self.message.get('is_echo', False)
 
     @property
     def has_quick_reply(self):
