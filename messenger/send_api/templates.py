@@ -1,5 +1,5 @@
 from .. import MessengerObject
-
+from elements import Element
 
 class TemplateObject(MessengerObject):
     pass
@@ -23,5 +23,24 @@ class ButtonTemplate(TemplateObject):
             'text': self.text,
             'buttons': [
                 button.to_dict() for button in self.buttons
+            ]
+        }
+
+class GenericTemplate(TemplateObject):
+
+    element_limit = 10
+    template_type = "generic"
+
+    def __init__(self):
+        self.elements = []
+
+    def add_element(self, element):
+        self.append(self.elements, element, self.element_limit)
+
+    def to_dict(self):
+        return{
+            'template_type': self.template_type, 
+            'elements': [
+                elements.to_dict() for element in self.elements
             ]
         }
