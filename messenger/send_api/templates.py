@@ -1,5 +1,4 @@
 from .. import MessengerObject
-from elements import Element
 
 class TemplateObject(MessengerObject):
     pass
