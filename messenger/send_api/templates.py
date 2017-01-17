@@ -25,8 +25,8 @@ class ButtonTemplate(TemplateObject):
             ]
         }
 
-class GenericTemplate(TemplateObject):
 
+class GenericTemplate(TemplateObject):
     element_limit = 10
     template_type = "generic"
 
@@ -38,8 +38,8 @@ class GenericTemplate(TemplateObject):
 
     def to_dict(self):
         return{
-            'template_type': self.template_type, 
+            'template_type': self.template_type,
             'elements': [
-                elements.to_dict() for element in self.elements
+                self.elements.to_dict() for element in self.elements
             ]
         }
