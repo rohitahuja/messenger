@@ -1,12 +1,12 @@
 from .. import MessengerObject
-from buttons import Button
+
 
 class Element(MessengerObject):
     def __init__(self, title, image_url, subtitle):
-        if len(title) > 80: 
+        if len(title) > 80:
             raise ValueError('Element title limit is 80 characters!')
 
-        if len(subtitle) > 80: 
+        if len(subtitle) > 80:
             raise ValueError('Element subtitle limit is 80 characters!')
 
         self.button_limit = 3
@@ -22,10 +22,9 @@ class Element(MessengerObject):
     def to_dict(self):
         return {
             'title': self.title,
-            'subtitle': self.subtitle, 
-            'image_url': self.image_url, 
+            'subtitle': self.subtitle,
+            'image_url': self.image_url,
             'buttons': [
                 button.to_dict() for button in self.buttons
             ]
         }
-
