@@ -40,6 +40,6 @@ class GenericTemplate(TemplateObject):
         return{
             'template_type': self.template_type,
             'elements': [
-                self.elements.to_dict() for element in self.elements
+                element.to_dict() for element in self.elements
             ]
         }
