@@ -33,7 +33,7 @@ class QuickReply(MessengerObject):
 
 class QuickReplies(MessengerObject):
 
-    QUICK_REPLIES_LIMIT = 10
+    QUICK_REPLIES_LIMIT = 11
 
     def __init__(self):
         self.quick_replies = []
